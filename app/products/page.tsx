@@ -1,32 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "../contact/contact-form";
-
+import Header from "../components/header";
 export const metadata = {
-  title: "Products & Raw Material Procurement",
+  title: "Products & Raw Material Procurement | Vamya Industries",
+  description: "Raw material procurement and refined lead ingot manufacturing portfolio.",
 };
 
 export default function ProductsPage() {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#1e295d]/90 backdrop-blur-md border-b border-slate-700/50 px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3.5">
-          <div className="w-10 h-10 rounded-full overflow-hidden relative border-2 border-white/20 bg-[#1e295d] flex items-center justify-center">
-            <Image src="/v-mark.png" alt="Vamya Emblem" width={40} height={40} className="object-cover" priority />
-          </div>
-          <span className="font-bold text-lg tracking-wide">Vamya Industries</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-[#5fa728]">Home</Link>
-          <Link href="/about" className="hover:text-[#5fa728]">About Us</Link>
-          <Link href="/products" className="text-[#5fa728] font-semibold">Our Products</Link>
-          <Link href="/sustainability" className="hover:text-[#5fa728]">Sustainability</Link>
-          <Link href="/contact" className="hover:text-[#5fa728]">Contact</Link>
-        </nav>
-      </header>
+    <div className="min-h-screen bg-[#0f172a] text-white w-full overflow-x-hidden">
+      
+      {/* ----------------- STANDARDIZED HEADER ----------------- */}
+      <Header />
+      {/* ------------------------------------------------------- */}
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="py-16 px-6 text-center max-w-4xl mx-auto">
         <span className="text-[#5fa728] font-semibold uppercase tracking-widest text-xs bg-[#5fa728]/10 px-3 py-1 rounded-full border border-[#5fa728]/20">
           Raw Materials & Manufacturing
@@ -37,10 +26,10 @@ export default function ProductsPage() {
         </p>
       </section>
 
-      {/* Main Grid: 2 Columns (Raw Materials vs Final Products) */}
+      {/* Main Grid Section */}
       <section className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-10">
         
-        {/* COLUMN 1: RAW MATERIALS (WE PURCHASE) */}
+        {/* COLUMN 1: RAW MATERIALS */}
         <div className="bg-[#1e295d]/50 border border-slate-700/60 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
           <div>
             <span className="text-xs font-bold text-[#5fa728] uppercase tracking-wider bg-[#5fa728]/20 px-3 py-1 rounded-full">
@@ -68,7 +57,7 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* COLUMN 2: FINAL PRODUCTS (WE SUPPLY) */}
+        {/* COLUMN 2: FINAL PRODUCTS */}
         <div className="bg-[#1e295d]/50 border border-slate-700/60 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
           <div>
             <span className="text-xs font-bold text-[#5fa728] uppercase tracking-wider bg-[#5fa728]/20 px-3 py-1 rounded-full">

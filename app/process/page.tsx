@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import Header from "../components/header";
 export default function ProcessPage() {
   const steps = [
     { num: "01", title: "Battery Crashing & Separation", desc: "Automated mechanical crushing separates heavy plastic, battery acid, and metallic lead component components." },
@@ -11,29 +11,7 @@ export default function ProcessPage() {
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
-      <header className="sticky top-0 z-50 bg-[#1e295d]/90 backdrop-blur-md border-b border-slate-700/50 px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3.5 group">
-          <div className="w-12 h-12 rounded-full overflow-hidden relative flex-shrink-0 shadow-md border-2 border-white/20 bg-[#1e295d] flex items-center justify-center">
-            <Image src="/v-mark.png" alt="Vamya Emblem" width={48} height={48} className="w-full h-full object-cover" priority />
-          </div>
-          <div className="flex flex-col text-white">
-            <span className="font-bold text-lg leading-tight tracking-wide">Vamya Industries</span>
-            <span className="text-xs font-medium text-slate-200 tracking-normal">India Pvt. Ltd.</span>
-            <span className="text-[11px] text-[#5fa728] font-semibold tracking-tight mt-0.5">Extracting Value. Preserving Nature.</span>
-          </div>
-        </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-[#5fa728] transition-colors">Home</Link>
-          <Link href="/about" className="hover:text-[#5fa728] transition-colors">About Us</Link>
-          <Link href="/process" className="text-[#5fa728] font-semibold">Our Process</Link>
-          <Link href="/infrastructure" className="hover:text-[#5fa728] transition-colors">Infrastructure</Link>
-          <Link href="/sustainability" className="hover:text-[#5fa728] transition-colors">Sustainability</Link>
-          <Link href="/contact" className="hover:text-[#5fa728] transition-colors">Contact</Link>
-        </nav>
-        <Link href="/contact" className="bg-[#5fa728] hover:bg-[#4e8f21] text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-md">
-          Get In Touch
-        </Link>
-      </header>
+     <Header />
 
       <section className="py-20 px-6 text-center max-w-4xl mx-auto">
         <span className="text-[#5fa728] font-semibold uppercase tracking-widest text-xs bg-[#5fa728]/10 px-3 py-1 rounded-full border border-[#5fa728]/20">

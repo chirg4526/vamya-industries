@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./contact-form";
+import Header from "../components/header";
 
 export const metadata = {
   title: "Contact Us | Vamya Industries India Pvt. Ltd.",
@@ -13,21 +14,8 @@ const googleMapsUrl = "https://maps.app.goo.gl/AqtJ4PfTZtDSsDgW7";
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
       {/* Header Navigation */}
-      <header className="sticky top-0 z-50 bg-[#1e295d]/90 backdrop-blur-md border-b border-slate-700/50 px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3.5">
-          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 bg-[#1e295d] flex items-center justify-center">
-            <Image src="/v-mark.png" alt="Vamya Emblem" width={40} height={40} className="object-cover" priority />
-          </div>
-          <span className="font-bold text-lg tracking-wide">Vamya Industries</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-[#5fa728]">Home</Link>
-          <Link href="/about" className="hover:text-[#5fa728]">About Us</Link>
-          <Link href="/products" className="hover:text-[#5fa728]">Our Products</Link>
-          <Link href="/sustainability" className="hover:text-[#5fa728]">Sustainability</Link>
-          <Link href="/contact" className="text-[#5fa728] font-semibold">Contact</Link>
-        </nav>
-      </header>
+    
+        <Header />
 
       {/* Main Contact Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto">

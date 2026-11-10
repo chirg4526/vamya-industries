@@ -34,12 +34,11 @@ export default function Home() {
   </div>
 </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-  <Link href="/" className="hover:text-[#5fa728] transition-colors">Home</Link>
-  <Link href="/about" className="hover:text-[#5fa728] transition-colors">About Us</Link>
-  <Link href="/process" className="hover:text-[#5fa728] transition-colors">Our Process</Link>
-  <Link href="/infrastructure" className="hover:text-[#5fa728] transition-colors">Infrastructure</Link>
-  <Link href="/sustainability" className="hover:text-[#5fa728] transition-colors">Sustainability</Link>
-  <Link href="/contact" className="hover:text-[#5fa728] transition-colors">Contact</Link>
+  <Link href="/" className="hover:text-[#5fa728]">Home</Link>
+  <Link href="/about" className="hover:text-[#5fa728]">About Us</Link>
+  <Link href="/products" className="hover:text-[#5fa728]">Our Products</Link>
+  <Link href="/sustainability" className="hover:text-[#5fa728]">Sustainability</Link>
+  <Link href="/contact" className="hover:text-[#5fa728]">Contact</Link>
 </nav>
           <a
             href="#contact"
